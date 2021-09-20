@@ -1,0 +1,5 @@
+Email: <input type='text' [disabled]="loginClicked" (input)="email=getEmail($event)"/>
+<br><br>
+<button (click)="onLogin()">Login</button>
+<br>
+<div *ngIf="loginClicked">Login link has been sent to {{email}} if it exists.</div>
