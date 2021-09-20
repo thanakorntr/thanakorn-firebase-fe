@@ -26,3 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # thanakorn-firebase-fe
+
+The UI that serves as a POC for Firebase authentication. Deployed via Google App Engine.
+
+## Requirements and Setups
+- The GCP project must be created.
+
+## Build & Deployment
+- gcloud config set project thanakorn-firebase-fe
+- ng build --prod
+- gcloud app deploy --version=1
