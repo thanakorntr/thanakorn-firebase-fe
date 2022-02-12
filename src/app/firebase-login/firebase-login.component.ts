@@ -6,9 +6,9 @@ import { BackendService } from '../backend.service';
 
 // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
 const firebaseConfig = {
-  apiKey: "AIzaSyAh1HQw8nQZOD2NWmSHOxLjT2niimNoV4A",
-  authDomain: "thanakorn-firebase-be.firebaseapp.com",
-  projectId: "thanakorn-firebase-be",
+  apiKey: "AIzaSyCJSCnVG5Tiih4kY86XytwrCvepmteasco",
+  authDomain: "thanakorn-firebase-be2.firebaseapp.com",
+  projectId: "thanakorn-firebase-be2",
 };
 
 @Component({
