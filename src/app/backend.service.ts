@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BackendService {
 
-  loginUrl = 'https://thanakorn-firebase-be2.appspot.com/_ah/api/skeleton/v1/login?email=';
+  loginUrl = 'https://thanakorn-firebase-be3.appspot.com/_ah/api/skeleton/v1/login?email=';
 
   constructor(private httpClient: HttpClient) {}
 
