@@ -1,0 +1,36 @@
+<div id="recaptcha-container"></div>
+
+<div *ngIf="showEmailVerification">
+    <h1>Please enter your email to verify.</h1>
+
+    <input type="text" [(ngModel)]="email"  class="input">
+    <button (click)="signIn()">Verify</button>
+</div>
+
+<div *ngIf="showVerificationCodeDialogForSignin">
+    <hr>
+    <label for="code">Enter your Verification Code Here</label><br>
+    <input type="text" name="code" [(ngModel)]="verificationCode">
+
+    <button (click)="multiFactorSignin()">Verify</button>
+</div>
+
+<div *ngIf="showVerificationCodeDialogForEnroll">
+    <hr>
+    <label for="code">Enter your Verification Code Here</label><br>
+    <input type="text" name="code" [(ngModel)]="verificationCode">
+
+    <button (click)="multiFactorEnroll()">Enroll</button>
+</div>
+
+<div *ngIf="showPhoneNumberForEnroll">
+    <hr>
+    <label for="code">Enter your phone number for second factor authentication.</label><br>
+    <label for="phone">Phone Number</label><br>
+    <input type="text" [(ngModel)]="phoneNumber.country"  class="input" placeholder="1"    maxlength="2">
+    <input type="text" [(ngModel)]="phoneNumber.area"     class="input" placeholder="949"  maxlength="3">
+    <input type="text" [(ngModel)]="phoneNumber.prefix"   class="input" placeholder="555"  maxlength="3">
+    <input type="text" [(ngModel)]="phoneNumber.line"     class="input" placeholder="5555" maxlength="4">
+
+    <button (click)="enrollPhoneNumber()">Enroll</button>
+</div>

@@ -1,26 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WindowService } from '../window.service';
 import { RecaptchaVerifier, getAuth, signInWithPhoneNumber, Auth} from 'firebase/auth';
-
-export class PhoneNumber {
-  country: string;
-  area: string;
-  prefix: string;
-  line: string;
-
-  constructor() {
-    this.country = '';
-    this.area = '';
-    this.prefix = '';
-    this.line = '';
-  }
-
-  // format phone numbers as E.164
-  get e164() {
-    const num = this.country + this.area + this.prefix + this.line
-    return `+${num}`
-  }
-}
+import { PhoneNumber } from '../phone-number';
 
 @Component({
   selector: 'phone-login',
@@ -57,7 +38,6 @@ export class PhoneLoginComponent implements OnInit {
                 this.windowRef.confirmationResult = confirmationResult;
             })
             .catch(error => console.log(error));
-
   }
 
   verifyLoginCode() {
